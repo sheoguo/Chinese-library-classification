@@ -1,0 +1,7 @@
+# tests/__init__.py
+import pytest
+
+# 你可以在这里做一些全局的测试前置操作，比如初始化某些环境变量
+@pytest.fixture(scope="session", autouse=True)
+def setup_environment():
+    print("Running global test setup...")
